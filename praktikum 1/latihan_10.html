@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>KRS Mahasiswa</title>
+
+    <link
+      href="https://assets.siakadcloud.com/assets/v1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://assets.siakadcloud.com/assets/v1/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://assets.siakadcloud.com/assets/v1/js/external/jquery.min.js"></script>
+    <script src="https://assets.siakadcloud.com/assets/v1/js/forrep.js"></script>
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://assets.siakadcloud.com/uploads/pnm/logoaplikasi/1124.jpg"
+    />
+
+    <style>
+      body {
+        margin: 30px auto;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 12px;
+      }
+
+      td,
+      th {
+        vertical-align: top;
+      }
+
+      th {
+        text-align: center;
+      }
+
+      .kop {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      .kop td {
+        padding: 0;
+        text-align: center;
+      }
+
+      .header td,
+      .header th {
+        font-size: 16px;
+      }
+      .mid td,
+      .mid th {
+        font-size: 14px;
+      }
+
+      .center td,
+      .center th {
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      table.border {
+        border-collapse: collapse;
+      }
+
+      table.border td,
+      table.border th {
+        border: 1px solid black;
+      }
+
+      hr {
+        margin: 10px auto;
+        border: 1px solid black;
+        border-width: 1px 0 0 0;
+      }
+
+      .title {
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .padded th,
+      .padded td {
+        padding: 4px;
+      }
+
+      table.tb_identity {
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 12px;
+      }
+
+      table.tb_title {
+        border: 1px solid;
+        margin-bottom: 12px;
+      }
+
+      /* FIX: agar tidak semua td kena style */
+      table.tb_data th,
+      table.tb_data td {
+        vertical-align: middle;
+      }
+
+      table.tb_acc {
+        margin-top: 20px;
+      }
+
+      .footer {
+        background-color: #fab619;
+        height: 36px;
+        width: 100%;
+        margin-top: 20px;
+        position: relative;
+      }
+
+      .footer::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        content: url("https://assets.siakadcloud.com/assets/v1/img/obe/object-footer.svg");
+        height: 61px;
+      }
+
+      @media print {
+        .footer.no-print {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div align="center">
+      <div style="width: 700px">
+        <!-- HEADER -->
+        <table style="width: 100%">
+          <tr>
+            <td style="width: 15%" align="center">
+              <img
+                src="https://assets.siakadcloud.com/uploads/pnm/logoaplikasi/1124.jpg"
+                width="98"
+                height="98"
+              />
+            </td>
+            <td style="font-family: arial" align="center">
+              <strong style="font-size: 18.6px"
+                >KEMENTERIAN PENDIDIKAN TINGGI,</strong
+              ><br />
+              <strong style="font-size: 18px">SAINS DAN TEKNOLOGI</strong><br />
+              <strong style="font-size: 16px">POLITEKNIK NEGERI MADIUN</strong
+              ><br />
+              Jalan Serayu Nomor 84 Madiun Kode Pos 63133 <br />
+              Telepon +62 351 452970 Faksimile +62 351 452960<br />
+              Laman: www.pnm.ac.id, Surel: sekretariat@pnm.ac.id
+            </td>
+          </tr>
+        </table>
+
+        <hr style="border: 0; border-top: 5px double #8c8c8c; margin-top: 0" />
+
+        <!-- JUDUL -->
+        <table width="700">
+          <tr>
+            <td align="center">
+              <strong>KARTU RENCANA STUDI (KRS)</strong><br />
+              <strong>SEMESTER GENAP</strong><br />
+              <strong>TAHUN AKADEMIK 2025/2026</strong>
+            </td>
+          </tr>
+        </table>
+
+        <!-- IDENTITAS -->
+        <table width="700">
+          <tr>
+            <td width="210"><strong>Nama Mahasiswa</strong></td>
+            <td width="220">: ROBBIN CHANDRA FALLA ARYA ARDHANA</td>
+            <td width="80"><strong>Jurusan</strong></td>
+            <td>: Teknik</td>
+          </tr>
+          <tr>
+            <td><strong>NIM</strong></td>
+            <td>: 253307059</td>
+            <td><strong>Program Studi</strong></td>
+            <td>: Teknologi Informasi</td>
+          </tr>
+        </table>
+
+        <div align="left"><b>Mata Kuliah yang ditempuh :</b></div>
+
+        <!-- TABEL MK -->
+        <table
+          class="tb_data"
+          width="700"
+          border="1"
+          cellspacing="0"
+          cellpadding="3"
+        >
+          <tr align="center">
+            <th>No</th>
+            <th>Kode MK</th>
+            <th>Mata Kuliah</th>
+            <th>SKS</th>
+            <th>Kelas</th>
+            <th>Dosen Pengampu</th>
+          </tr>
+
+          <tr>
+            <td align="center">1</td>
+            <td align="center">MKU2401</td>
+            <td>Agama Islam</td>
+            <td align="center">2</td>
+            <td align="center">2B</td>
+            <td>Dr. Nanik Nurhayati, S.Ag., M.Pd.</td>
+          </tr>
+
+          <tr>
+            <td align="center">2</td>
+            <td align="center">TI24201</td>
+            <td>Komputasi Matematika</td>
+            <td align="center">2</td>
+            <td align="center">2B</td>
+            <td>Tri Septianto, S.Kom., M.Kom.</td>
+          </tr>
+
+          <tr>
+            <td align="center">3</td>
+            <td align="center">TI24203</td>
+            <td>Manajemen Proyek Teknologi Informasi</td>
+            <td align="center">2</td>
+            <td align="center">2B</td>
+            <td>Lutfiyah Dwi Setia, S.Kom., M.Kom.</td>
+          </tr>
+
+          <tr>
+            <td align="center">4</td>
+            <td align="center">TI24204</td>
+            <td>Sistem Komunikasi Optic</td>
+            <td align="center">3</td>
+            <td align="center">2B</td>
+            <td>Muhammad Syaeful Fajar, S.Pd., M.Kom.</td>
+          </tr>
+
+          <tr>
+            <td align="center">5</td>
+            <td align="center">TI24205</td>
+            <td>Pemrograman Berbasis Obyek</td>
+            <td align="center">3</td>
+            <td align="center">2B</td>
+            <td>Mochamat Bayu Aji, M.Kom.</td>
+          </tr>
+
+          <tr>
+            <td align="center">6</td>
+            <td align="center">TI24206</td>
+            <td>Desain & Pemrograman Web</td>
+            <td align="center">3</td>
+            <td align="center">2B</td>
+            <td>Angger Binuko Paksi, M.Kom.</td>
+          </tr>
+
+          <tr>
+            <td align="center">7</td>
+            <td align="center">TI24207</td>
+            <td>Sistem Operasi</td>
+            <td align="center">3</td>
+            <td align="center">2B</td>
+            <td>Hery Maryanto, S.Pd., M.Kom.</td>
+          </tr>
+
+          <tr>
+            <td align="center">8</td>
+            <td align="center">TI24208</td>
+            <td>UI/UX Design</td>
+            <td align="center">2</td>
+            <td align="center">2B</td>
+            <td>Rahmania Kumalasari, S.Kom., M.Kom</td>
+          </tr>
+
+          <tr>
+            <td colspan="3" align="center"><strong>Jumlah</strong></td>
+            <td align="center"><strong>20</strong></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+
+        <!-- TTD -->
+        <table class="tb_acc" width="700">
+          <tr>
+            <td width="40%" align="left">
+              Mahasiswa,<br /><br /><br /><br /><br />
+              <u>ROBBIN CHANDRA FALLA ARYA ARDHANA</u><br />
+              NIM. 253307059
+            </td>
+
+            <td></td>
+
+            <td width="40%" align="left">
+              Madiun, 27 Februari 2026<br />
+              Dosen Pembina Akademik,<br /><br /><br />
+              Angger Binuko Paksi, M.Kom.<br />
+              NIDN. 0002049105
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
