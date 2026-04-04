@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Sederhana</title>
+  <link rel="icon" type="image/png" href="gambar/icon.png" sizes="16x16" />
+</head>
+
+<body>
+  <form action="/action_page.php" method="post" target="_blank">
+    <label for="depan">Nama depan: </label>
+    <input type="text" id="depan" name="i_depan" value="Budi" /> <br />
+    <label for="belakang">Nama belakang: </label>
+    <input type="text" id="belakang" name="i_belakang" value="Prawira" /> <br />
+    <br />
+    <input type="submit" value="Kirim" />
+    <input type="reset" value="Reset" />
+  </form>
+  <p>
+    Jika Anda mengklik tombol "Kirim", data formulir akan dikirim ke halaman
+    bernama "action_page.php".
+  </p>
+  <!-- Kesimpulan -->
+  <p>
+    Tombol Reset mengembalikan semua input ke nilai awal (Budi dan Prawira). Tombol Kirim mengirim data ke action_page.php. Atribut target="_self" membuka hasil di tab yang sama, target="_blank" membuka di tab baru. Method GET menampilkan data di URL (contoh: ?i_depan=Budi&i_belakang=Prawira) sehingga bisa di-bookmark tetapi kurang aman. Method POST menyembunyikan data di body request, lebih aman untuk data sensitif tetapi tidak bisa di-bookmark.
+  </p>
+
+</body>
+
+</html>
