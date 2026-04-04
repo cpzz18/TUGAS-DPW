@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Robbin Chandra" />
+    <meta name="nim" content="253307059" />
+    <title>Halaman Event</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            margin: 10px 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .gambar {
+            display: grid;
+            grid-template-columns: repeat(3, 300px);
+            gap: 10px;
+        }
+
+        .gambar img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>Judul Website</header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+                <li><a href="pendaftaran.html">Pendaftaran</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>Mouse Event pada Gambar</h1>
+
+            <div class="gambar">
+                <img src="gambar/gambar1.png" onmouseover="this.style.opacity='0.5'" onmouseout="this.style.opacity='1'"
+                    onclick="alert('Gambar diklik!')" alt="Gambar 1" />
+
+                <img src="gambar/gambar2.png" onmouseover="this.style.transform='scale(1.2)'"
+                    onmouseout="this.style.transform='scale(1)'" alt="Gambar 2" />
+
+                <img src="gambar/gambar3.png" onmousedown="this.style.border='3px solid red'"
+                    onmouseup="this.style.border='none'" alt="Gambar 3" />
+
+                <img src="gambar/gambar4.png" ondblclick="alert('Double klik!')" alt="Gambar 4" />
+
+                <img src="gambar/gambar5.png" onmousemove="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'"
+                    alt="Gambar 5" />
+
+                <img src="gambar/gambar6.png" onclick="this.style.display='none'" alt="Gambar 6" />
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <i><p>copyright Robbin Chandra F &copy; 2026</p></i>
+    </footer>
+</body>
+
+</html>
