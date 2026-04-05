@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combinator Selector</title>
+    <style>
+        /* Descendant Selector */
+        div p {
+            color: red;
+        }
+
+        /* Child Selector */
+        div>p {
+            background-color: yellow;
+        }
+
+        /* Adjacent Sibling Selector */
+        div+p {
+            background-color: gray;
+        }
+
+        /* General Sibling Selector */
+        div~p {
+            color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Combinator Selector</h1>
+    <div>
+        <div>
+            <p>
+                1. This paragraph is red because it is inside a div (descendant) and has
+                a yellow background (child).
+            </p>
+            <p>
+                2. This paragraph is also a direct child of the div, so it gets the same
+                styles.
+            </p>
+        </div>
+
+        <p>
+            3. This paragraph comes right after the div, so it gets a gray background
+            (adjacent sibling).
+        </p>
+
+        <p>
+            4. This paragraph is a sibling of the div, so its text is cyan (general
+            sibling).
+        </p>
+</body>
+
+</html>
