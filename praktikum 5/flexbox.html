@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Flex Box</title>
+    <style>
+      /* Skenario 1 */
+      .wadah_flex {
+        background-color: lightblue;
+        display: flex;
+        /*skenario 3
+        flex-direction: row; */
+        /*skenario 4 
+        flex-wrap: wrap;*/
+        /*skenario5*/
+        flex-flow: row wrap;
+      }
+      /* Skenario 2 */
+      .wadah_flex > div {
+        background-color: #f34b21;
+        margin: 10px;
+        padding: 10px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wadah_flex">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+   <!--kesimpulan skenario 1-->
+<p>
+    <strong>Kesimpulan Skenario 1:</strong> <code>display: flex;</code> mengubah 
+    perilaku default dari vertikal (tumpuk ke bawah) menjadi <strong>horizontal 
+    berjajar ke samping</strong>.
+  </p>
+  <hr />
+  
+  <!--kesimpulan skenario 2-->
+  <p>
+    <strong>Kesimpulan Skenario 2:</strong> Selector <code>.wadah_flex > div</code> 
+    memberi gaya pada semua item: <strong>warna oranye, margin 10px, padding 10px, 
+    dan font 30px</strong>.
+  </p>
+  <hr />
+  
+  <!--kesimpulan skenario 3-->
+  <p>
+    <strong>Kesimpulan Skenario 3:</strong> <code>flex-direction</code> mengatur 
+    arah susunan item: <code>row</code> (horizontal), <code>column</code> (vertikal), 
+    atau <code>*-reverse</code> (terbalik).
+  </p>
+  <hr />
+  
+  <!--kesimpulan skenario 4-->
+  <p>
+    <strong>Kesimpulan Skenario 4:</strong> <code>flex-wrap: wrap;</code> membuat 
+    item <strong>pindah ke baris baru</strong> jika tidak muat dalam satu baris, 
+    sedangkan <code>nowrap</code> memaksa semua item tetap dalam satu baris.
+  </p>
+  <hr />
+  
+  <!--kesimpulan skenario 5-->
+  <p>
+    <strong>Kesimpulan Skenario 5:</strong> <code>flex-flow</code> adalah gabungan 
+    <code>flex-direction</code> + <code>flex-wrap</code>. Contoh: 
+    <code>flex-flow: row wrap;</code> artinya <strong>arah horizontal dan boleh 
+    membungkus</strong>.
+  </p>
+  </body>
+</html>
