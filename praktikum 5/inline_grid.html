@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .tempat_grid {
+        display: inline-grid;
+        grid-template-columns: auto auto auto;
+        background-color: #2196f3;
+        padding: 10px;
+      }
+      .item_grid {
+        background-color: rgb(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tampilan:</h1>
+    <div class="tempat_grid">
+      <div class="item_grid">1</div>
+      <div class="item_grid">2</div>
+      <div class="item_grid">3</div>
+      <div class="item_grid">4</div>
+      <div class="item_grid">5</div>
+      <div class="item_grid">6</div>
+      <div class="item_grid">7</div>
+      <div class="item_grid">8</div>
+      <div class="item_grid">9</div>
+    </div>
+    <!--kesimpulan skenario 2-->
+    <div>
+      <p>
+        <strong>Kesimpulan Skenario 2:</strong> Dengan menggunakan
+        <code>display: inline-grid;</code>, elemen dengan class <code>.tempat_grid</code>
+        diubah menjadi sebuah grid yang bersifat inline. Ini berarti bahwa grid tersebut
+        akan berperilaku seperti elemen inline, sehingga dapat berdampingan dengan elemen
+        lain di sekitarnya jika ada ruang yang cukup. Namun, dalam contoh ini, karena
+        tidak ada elemen lain di sekitarnya, tampilan grid tetap sama seperti pada skenario
+        sebelumnya, yaitu tersusun dalam format 3 baris × 3 kolom. Perbedaan utama antara
+        <code>display: grid;</code> dan <code>display: inline-grid;</code> terletak pada cara mereka
+        berinteraksi dengan elemen lain di sekitarnya, di mana <code>inline-grid</code> memungkinkan
+        elemen grid untuk berada dalam aliran teks atau berdampingan dengan elemen lain.
+      </p>
+    </div>
+  </body>
+</html>
