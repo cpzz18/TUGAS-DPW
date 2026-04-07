@@ -3,12 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Belajar CSS grid</title>
+    <title>Belajar grid</title>
     <style>
-      
+      .grid-container {
+        display: grid;
+        grid-gap: 50px;
+        background-color: #2196f3;
+        padding: 10px;
+        grid-template-columns: auto auto auto auto; /*skenario 2 */
+        /* grid-template-columns: auto auto; */
+        /* grid-template-columns: 70px 300px auto 40px; */
+        /* grid-template-columns: 10px 500px 20px 10px; */
+        padding: 10px;
+      }
+      .item1 {
+        /*
+        grid-column-start: 2;
+        grid-column-end: 3; */
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        font-size: 30x;
+        text-align: center;
+        grid-row: 1 / 4; /*skenario 1 part 2 */
+      }
+      .item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0red, 0, blu0e, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
+    <div class="grid-container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+    </div>
+    <!--kesimpulan skenario 1 -->
+    <p>
+      Penggunaan grid-column-start dan grid-column-end berfungsi untuk mengatur
+      posisi dan lebar elemen dalam grid. Dengan mengubah nilai dari 2 ke 4,
+      elemen kedua dapat melebar dan menempati lebih dari satu kolom, yaitu dari
+      kolom ke-2 hingga kolom ke-3. Hal ini menunjukkan bahwa CSS Grid
+      memungkinkan pengaturan layout yang fleksibel, sehingga elemen dapat
+      disesuaikan ukurannya sesuai kebutuhan.
+    </p>
+
+    <!--kesimpulan skenario 2 -->
     
+    Properti <i>grid-template-columns</i> digunakan untuk menentukan jumlah dan
+    ukuran kolom dalam CSS Grid. Ketika menggunakan nilai <i>auto</i>, lebar
+    kolom akan menyesuaikan isi secara otomatis. Jika jumlah kolom dikurangi
+    (misalnya menjadi 2 kolom), maka elemen akan tersusun ke bawah lebih banyak
+    baris. Sedangkan jika menggunakan ukuran tetap seperti pixel (px), maka
+    lebar setiap kolom akan mengikuti nilai yang ditentukan, sehingga ada kolom
+    yang terlihat sempit dan ada yang lebih lebar. Hal ini menunjukkan bahwa CSS
+    Grid sangat fleksibel dalam mengatur ukuran dan tata letak kolom sesuai
+    kebutuhan desain.
+
+    <!--kesimpulan skenario 1  part 2-->
+    <p>
+      <b>Kesimpulan Skenario 1 Part 2:</b><br />
+      Properti <i>grid-row</i> digunakan untuk mengatur tinggi dan posisi elemen
+      pada baris di dalam CSS Grid. Dengan nilai <i>grid-row: 1 / 4</i>, elemen
+      akan membentang dari baris ke-1 sampai sebelum baris ke-4, sehingga elemen
+      tersebut menempati beberapa baris sekaligus (3 baris). Jika nilai diubah,
+      maka tinggi elemen juga ikut berubah sesuai jumlah baris yang dilewati.
+      Hal ini menunjukkan bahwa CSS Grid memungkinkan pengaturan layout secara
+      fleksibel baik secara horizontal (kolom) maupun vertikal (baris).
+    </p>
+    <div></div>
   </body>
 </html>
