@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 20px;
+        background: #f0f0f0;
+      }
+      .card {
+        background: white;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      pre {
+        background: #2d2d2d;
+        color: #f8f8f2;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+      button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      .demo {
+        text-align: center;
+        padding: 20px;
+        background: #e9ecef;
+        border-radius: 8px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h1>JAX & jQuery</h1>
+
+    <div class="card">
+      <h2>AJAX</h2>
+      <strong>AJAX</strong> adalah teknik untuk mengirim dan menerima data dari
+      server <strong>tanpa refresh halaman</strong>. Contoh: saat scroll
+      Facebook, postingan baru muncul tanpa reload.
+    </div>
+
+    <div class="card">
+      <h2>jQuery</h2>
+      <strong>jQuery</strong> adalah library JavaScript yang mempermudah
+      penulisan kode JS. Dengan jQuery, kode menjadi lebih
+      <strong>singkat</strong> dan <strong>mudah</strong>.
+    </div>
+
+    <div class="card">
+      <h2>Masukkan library jQuery ke HTML via CDN</h2>
+      <pre>
+&lt;src="https://code.jquery.com/jquery-4.0.0.js"
+integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
+crossorigin="anonymous""&gt;&lt;/script&gt;</pre
+      >
+      <p>
+        <strong>Atau bisa juga:</strong> download filenya lalu panggil lokal.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Contoh jQuery</h2>
+      <div class="demo">
+        <p id="pesan" style="font-size: 20px">Halo Semua!</p>
+        <button id="sembunyi">Sembunyi</button>
+        <button id="muncul">Muncul</button>
+        <button id="ganti">Ganti Teks</button>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#sembunyi").click(function () {
+          $("#pesan").hide(300);
+        });
+
+        $("#muncul").click(function () {
+          $("#pesan").show(300);
+        });
+
+        $("#ganti").click(function () {
+          $("#pesan").text("jQuery itu mudah!").css("color", "green");
+        });
+      });
+    </script>
+  </body>
+</html>
