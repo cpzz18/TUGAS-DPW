@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Waktu Saat Ini:</h2>
+    <h3 id="hari"></h3>
+    <h1 id="jam"></h1>
+
+    <script>
+        function updateJam() {
+            const n = new Date();
+            document.getElementById("hari").innerHTML = `Hari: ${n.toLocaleDateString('id-ID', {weekday:'long'})}`;
+            document.getElementById("jam").innerHTML = `${n.toLocaleDateString('id-ID')} ${n.toLocaleTimeString('id-ID')}`;
+        }
+        updateJam();
+        setInterval(updateJam, 1000);
+    </script>
+</body>
+</html>
