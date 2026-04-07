@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Menu Sederhana</title>
+    <style>
+      body {
+        font-family: Arial;
+        margin: 0;
+        padding: 20px;
+        background: #f5f5f5;
+      }
+
+      .menu {
+        background: #333;
+        padding: 10px;
+        display: flex;
+        gap: 5px;
+      }
+
+      .menu button {
+        background: #555;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .menu button:hover {
+        background: #ff6600;
+      }
+
+      .aktif {
+        background: #ff6600 !important;
+      }
+
+      .content {
+        background: white;
+        padding: 30px;
+        margin-top: 20px;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      h2 {
+        color: #333;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="menu">
+      <button class="btn-menu" data-menu="home">Beranda</button>
+      <button class="btn-menu" data-menu="profil">Profil</button>
+      <button class="btn-menu" data-menu="layanan">Layanan</button>
+      <button class="btn-menu" data-menu="kontak">Kontak</button>
+    </div>
+
+    <div class="content">
+      <h2 id="title">Beranda</h2>
+      <p id="desc">Selamat datang di website kami.</p>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        const data = {
+          home: { title: "Beranda", desc: "Selamat datang di website kami." },
+          profil: {
+            title: "Profil",
+            desc: "Kami perusahaan teknologi sejak 2026.",
+          },
+          layanan: { title: "Layanan", desc: "Web, Mobile, dan Desain." },
+          kontak: {
+            title: "Kontak",
+            desc: "Email: chand@gmail.com | Telp: 02193128391",
+          },
+        };
+
+        $(".btn-menu").click(function () {
+          let menu = $(this).data("menu");
+
+          $("#title").text(data[menu].title);
+          $("#desc").text(data[menu].desc);
+
+          $(".btn-menu").removeClass("aktif");
+          $(this).addClass("aktif");
+        });
+      });
+    </script>
+  </body>
+</html>
