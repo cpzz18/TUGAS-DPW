@@ -12,3 +12,18 @@ $siswa = [
 
 echo "a) Tampilkan poin siswa dengan nomor urut 5  <br>";
 echo "Poin: " . $siswa[1]["poin"];
+
+echo "<br>b) Tampilkan semua nama siswa yang memiliki poin 90";
+foreach ($siswa as $key => $value) {
+    if ($value["poin"] == 90) {
+        echo "<br>" . $value["siswa"];
+    }
+}
+
+echo "<br>c) Tampilkan semua nama siswa yang memiliki poin 100 (hasil: tidak ada) *
+* Gunakan perulangan dan if";
+foreach ($siswa as $key => $value) {
+    if ($value["poin"] == 100) {
+        echo "<br>" . $value["siswa"];
+    }
+}
