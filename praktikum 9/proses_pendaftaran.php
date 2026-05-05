@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Proses Pendaftaran</title>
+    <title>Title</title>
 </head>
 <body>
-    Selamat datang <b><?php echo htmlspecialchars($_POST['nama']); ?></b><br>
-        NIM: <?php echo htmlspecialchars($_POST['nim']); ?><br>
-        Email: <?php echo htmlspecialchars($_POST['email']); ?><br>
-        Tempat, tanggal lahir: <?php echo htmlspecialchars($_POST['tempat_lahir'] . ', ' . $_POST['tanggal_lahir']); ?><br>
-        Alamat: <?php echo nl2br(htmlspecialchars($_POST['alamat'])); ?><br>
-        Jenis kelamin: <?php echo htmlspecialchars($_POST['gender']); ?><br>
+    Selamat datang <b><?php echo $_POST['nama']; ?></b><br>     
+        NIM: <?php echo $_POST['nim']; ?><br>
+        Email: <?php echo $_POST['email']; ?><br>
+        Tempat, tanggal lahir: <?php echo $_POST['tempat'] . ', ' . $_POST['ttl']; ?><br>
+        Alamat: <?php echo $_POST['alamat']; ?><br>
+        Jenis kelamin: <?php echo $_POST['gender']; ?><br>
 
         <p><b>Kesimpulan:</b> 
-            data berhasil ditampilkan dari input form.
+            hanya menampilkan selamat datang dan item2 lain belum menampilkan data yang dimasukkan oleh pengguna di form pendaftaran, mungkin karena metode pengiriman data adalah GET.
         </p>
         
 </body>
