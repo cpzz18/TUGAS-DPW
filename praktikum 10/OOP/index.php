@@ -1,5 +1,6 @@
 <?php 
 require_once 'kelas/Manusia.php';
+require_once 'koneksi_db.php';
 
 //andi
 $andi = new Manusia();
@@ -35,3 +36,12 @@ echo $Robbin->getAge() . "\n";
 // setter untuk mengubah nilai properti
 // getter untuk mengambil nilai properti
 // protected untuk mengakses properti dari kelas turunan, tidak bisa diakses dari luar kelas
+
+//koneksi php 
+$db = new KoneksiDB();
+$koneksiBerhasil = $db->connect();
+$hasil = $db->getHasil();
+
+echo "<pre>";
+print_r($hasil);
+echo "</pre>";
