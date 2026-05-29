@@ -5,13 +5,14 @@ if (isset($_POST['input'])) {
     $namaDosen = $_POST['namaDosen'];
     $noHP = $_POST['noHP'];
 
-    $query = "INSERT INTO t_dosen VALUES (NULL, '$namaDosen', '$noHP')";
-    $result = mysqli_query($link, $query);
+    $query = "INSERT INTO t_dosen (namaDosen, noHP) VALUES (?, ?)";
+    $stmt = $link->prepare($query);
+    $stmt->bind_param("ss", $namaDosen, $noHP);
 
-    if (!$result) {
-        die("Query gagal dijalankan: " . mysqli_errno($link) . " - " . mysqli_error($link));
+    if (!$stmt->execute()) {
+        die("Query gagal dijalankan: " . $stmt->error);
     }
 }
 
-header("location:viewdosen.php")   
+header("location:viewdosen.php");
 ?>

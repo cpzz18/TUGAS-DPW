@@ -2,12 +2,14 @@
 include "../koneksi.php";
 if (isset($_GET["kodeMK"])) {
     $id = $_GET["kodeMK"];
-    $query = "SELECT * FROM t_matakuliah WHERE kodeMK='$id'";
-    $result = mysqli_query($link, $query);
-    if (!$result) {
-        die("Query Error: " . mysqli_error($link) . " - " . mysqli_error($link));
+    $query = "SELECT * FROM t_matakuliah WHERE kodeMK=?";
+    $stmt = $link->prepare($query);
+    $stmt->bind_param("s", $id);
+    if (!$stmt->execute()) {
+        die("Query Error: " . $stmt->error);
     }
-    $data = mysqli_fetch_assoc($result);
+    $result = $stmt->get_result();
+    $data = $result->fetch_assoc();
     $kodeMK = $data["kodeMK"];
     $namaMK = $data["namaMK"];
     $sks = $data["sks"];

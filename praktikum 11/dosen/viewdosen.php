@@ -38,18 +38,22 @@ include "../koneksi.php"; ?>
                 $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : '';
                 
                 if ($keyword != '') {
-                    $query = "SELECT * FROM t_dosen WHERE namaDosen LIKE '%$keyword%' ORDER BY idDosen ASC";
+                    $query = "SELECT * FROM t_dosen WHERE namaDosen LIKE ? ORDER BY idDosen ASC";
+                    $stmt = $link->prepare($query);
+                    $like_keyword = "%$keyword%";
+                    $stmt->bind_param("s", $like_keyword);
                 } else {
                     $query = "SELECT * FROM t_dosen ORDER BY idDosen ASC";
+                    $stmt = $link->prepare($query);
                 }
                 
-                $result = mysqli_query($link, $query);
-                if (!$result) {
-                    die("Query Error: " . mysqli_errno($link) . " - " . mysqli_error($link));
+                if (!$stmt->execute()) {
+                    die("Query Error: " . $stmt->error);
                 }
                 
-                if (mysqli_num_rows($result) > 0) {
-                    while ($data = mysqli_fetch_assoc($result)) {
+                $result = $stmt->get_result();
+                if ($result->num_rows > 0) {
+                    while ($data = $result->fetch_assoc()) {
                         echo "<tr>";
                         echo "<td>" . $data['idDosen'] . "</td>";
                         echo "<td>" . $data['namaDosen'] . "</td>";

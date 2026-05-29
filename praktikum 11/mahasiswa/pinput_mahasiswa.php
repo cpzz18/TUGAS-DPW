@@ -8,11 +8,12 @@ if (isset($_POST['input'])) {
     $alamat = $_POST['alamat'];
     $noHP = $_POST['noHP'];
 
-    $query = "INSERT INTO t_mahasiswa (npm, namaMhs, prodi, alamat, noHP) VALUES ('$npm', '$namaMhs', '$prodi', '$alamat', '$noHP')";
-    $result = mysqli_query($link, $query);
+    $query = "INSERT INTO t_mahasiswa (npm, namaMhs, prodi, alamat, noHP) VALUES (?, ?, ?, ?, ?)";
+    $stmt = $link->prepare($query);
+    $stmt->bind_param("sssss", $npm, $namaMhs, $prodi, $alamat, $noHP);
 
-    if (!$result) {
-        die("Query gagal dijalankan: " . mysqli_errno($link) . " - " . mysqli_error($link));
+    if (!$stmt->execute()) {
+        die("Query gagal dijalankan: " . $stmt->error);
     }
 }
 

@@ -40,18 +40,22 @@ include "../koneksi.php"; ?>
                 $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : '';
                 
                 if ($keyword != '') {
-                    $query = "SELECT * FROM t_mahasiswa WHERE namaMhs LIKE '%$keyword%' ORDER BY npm ASC";
+                    $query = "SELECT * FROM t_mahasiswa WHERE namaMhs LIKE ? ORDER BY npm ASC";
+                    $stmt = $link->prepare($query);
+                    $like_keyword = "%$keyword%";
+                    $stmt->bind_param("s", $like_keyword);
                 } else {
                     $query = "SELECT * FROM t_mahasiswa ORDER BY npm ASC";
+                    $stmt = $link->prepare($query);
                 }
                 
-                $result = mysqli_query($link, $query);
-                if (!$result) {
-                    die("Query Error: " . mysqli_errno($link) . " - " . mysqli_error($link));
+                if (!$stmt->execute()) {
+                    die("Query Error: " . $stmt->error);
                 }
                 
-                if (mysqli_num_rows($result) > 0) {
-                    while ($data = mysqli_fetch_assoc($result)) {
+                $result = $stmt->get_result();
+                if ($result->num_rows > 0) {
+                    while ($data = $result->fetch_assoc()) {
                         echo "<tr>";
                         echo "<td>" . $data['npm'] . "</td>";
                         echo "<td>" . $data['namaMhs'] . "</td>";

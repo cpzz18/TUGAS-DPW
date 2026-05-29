@@ -4,11 +4,12 @@ include '../koneksi.php';
 if (isset($_GET['kodeMK'])) {
     $kodeMK = $_GET['kodeMK'];
 
-    $query = "DELETE FROM t_matakuliah WHERE kodeMK='$kodeMK'";
-    $result = mysqli_query($link, $query);
+    $query = "DELETE FROM t_matakuliah WHERE kodeMK=?";
+    $stmt = $link->prepare($query);
+    $stmt->bind_param("s", $kodeMK);
 
-    if (!$result) {
-        die("Query gagal dijalankan: " . mysqli_errno($link) . " - " . mysqli_error($link));
+    if (!$stmt->execute()) {
+        die("Query gagal dijalankan: " . $stmt->error);
     }
 }
 

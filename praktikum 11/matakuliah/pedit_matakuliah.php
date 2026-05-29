@@ -7,11 +7,12 @@ if (isset($_POST['edit'])) {
     $sks = $_POST['sks'];
     $jam = $_POST['jam'];
 
-    $query = "UPDATE t_matakuliah SET namaMK='$namaMK', sks='$sks', jam='$jam' WHERE kodeMK='$kodeMK'";
-    $result = mysqli_query($link, $query);
+    $query = "UPDATE t_matakuliah SET namaMK=?, sks=?, jam=? WHERE kodeMK=?";
+    $stmt = $link->prepare($query);
+    $stmt->bind_param("ssss", $namaMK, $sks, $jam, $kodeMK);
 
-    if (!$result) {
-        die("Query gagal dijalankan: " . mysqli_errno($link) . " - " . mysqli_error($link));
+    if (!$stmt->execute()) {
+        die("Query gagal dijalankan: " . $stmt->error);
     }
 }
 

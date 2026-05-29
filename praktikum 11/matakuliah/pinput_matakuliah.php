@@ -7,11 +7,12 @@ if (isset($_POST['input'])) {
     $sks = $_POST['sks'];
     $jam = $_POST['jam'];
 
-    $query = "INSERT INTO t_matakuliah (kodeMK, namaMK, sks, jam) VALUES ('$kodeMK', '$namaMK', '$sks', '$jam')";
-    $result = mysqli_query($link, $query);
+    $query = "INSERT INTO t_matakuliah (kodeMK, namaMK, sks, jam) VALUES (?, ?, ?, ?)";
+    $stmt = $link->prepare($query);
+    $stmt->bind_param("ssss", $kodeMK, $namaMK, $sks, $jam);
 
-    if (!$result) {
-        die("Query gagal dijalankan: " . mysqli_errno($link) . " - " . mysqli_error($link));
+    if (!$stmt->execute()) {
+        die("Query gagal dijalankan: " . $stmt->error);
     }
 }
 

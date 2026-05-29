@@ -2,12 +2,14 @@
 include "../koneksi.php";
 if (isset($_GET["npm"])) {
     $id = $_GET["npm"];
-    $query = "SELECT * FROM t_mahasiswa WHERE npm='$id'";
-    $result = mysqli_query($link, $query);
-    if (!$result) {
-        die("Query Error: " . mysqli_error($link) . " - " . mysqli_error($link));
+    $query = "SELECT * FROM t_mahasiswa WHERE npm=?";
+    $stmt = $link->prepare($query);
+    $stmt->bind_param("s", $id);
+    if (!$stmt->execute()) {
+        die("Query Error: " . $stmt->error);
     }
-    $data = mysqli_fetch_assoc($result);
+    $result = $stmt->get_result();
+    $data = $result->fetch_assoc();
     $npm = $data["npm"];
     $namaMhs = $data["namaMhs"];
     $prodi = $data["prodi"];
