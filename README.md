@@ -29,6 +29,11 @@ Berikut adalah daftar modul yang telah diselesaikan. Silakan klik pada nama modu
 |  5  | **Modul 5** | Modul Praktikum 5 - CSS Layout          |       [Lihat Modul](https://github.com/cpzz18/TUGAS-DPW/blob/main/module/Modul%20Praktikum%205%20-%20CSS%20Layout.pdf)        |
 |  6  | **Modul 6** | Modul Praktikum 6 - CSS Framework       |                     [Lihat Modul](https://github.com/cpzz18/TUGAS-DPW/blob/main/module/Modul%20Praktikum%206%20-%20CSS%20framework.pdf)                     |
 |  7  | **Modul 7** | Modul Praktikum 7 - Javascript          |               [Lihat Modul](https://github.com/cpzz18/TUGAS-DPW/blob/main/module/Modul%20Praktikum%207%20-%20Javascript.pdf)               |
+|  8  | **Modul 8** | Modul Praktikum 8 - PHP Dasar          |               [Lihat Modul](https://github.com/cpzz18/TUGAS-DPW/blob/main/module/Modul%20Praktikum%207%20-%20Javascript.pdf)               |
+|  9  | **Modul 9** | Modul Praktikum 9 - PHP Lanjut          |               [Lihat Modul](https://github.com/cpzz18/TUGAS-DPW/blob/main/module/Modul%20Praktikum%207%20-%20Javascript.pdf)               |
+|  10  | **Modul 10** | Modul Praktikum 10 - PHP OOP          |               [Lihat Modul](https://github.com/cpzz18/TUGAS-DPW/blob/main/module/Modul%20Praktikum%207%20-%20Javascript.pdf)               |
+|  11  | **Modul 11** | Modul Praktikum 11 - PHP Database CRUD          |               [Lihat Modul](https://github.com/cpzz18/TUGAS-DPW/blob/main/module/Modul%20Praktikum%207%20-%20Javascript.pdf)               |
+|  12  | **Modul 12** | Modul Praktikum 12 - PHP Database OOP          |               [Lihat Modul](https://github.com/cpzz18/TUGAS-DPW/blob/main/module/Modul%20Praktikum%207%20-%20Javascript.pdf)               |
 
 ---
 
